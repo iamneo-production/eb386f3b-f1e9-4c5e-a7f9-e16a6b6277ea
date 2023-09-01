@@ -30,7 +30,7 @@ function App() {
   const dispatch = useDispatch();
   const usersDetails = useSelector((state) => state.user.user);
   const [currentUserDetails, setCurrentUserDetails] = useState({});
-  const [emailId, setEmailId] = useState('ashlesh@gmail.com');
+  const [emailId, setEmailId] = useState('');
   const user = {
     name: "Thammayya",
     role: "BANK_MANAGER",
@@ -41,18 +41,24 @@ function App() {
   };
 
   useEffect(() => {
-    localStorage.setItem('emailId', emailId)
-    if (usersDetails.length === 0) {
-      dispatch(getUserDetails());
+    setEmailId(localStorage.getItem('emailId', emailId));
+    if (emailId === null) {
+      navigate('/login');
     } else {
-      if (emailId && emailId.length > 0) {
-        const dataVal = usersDetails.find(ele => ele.email === emailId);
-        console.log(dataVal)
-        setCurrentUserDetails(dataVal)
-        localStorage.setItem('role', currentUserDetails.role)
+      if (usersDetails.length === 0) {
+        dispatch(getUserDetails());
+      } else {
+        if (emailId.length === 0) {
+          navigate('/login');
+        } else {
+          const dataVal = usersDetails.find(ele => ele.email === emailId);
+          console.log(dataVal)
+          setCurrentUserDetails(dataVal)
+          localStorage.setItem('role', currentUserDetails.role)
+        }
       }
     }
-  }, [usersDetails, dispatch, emailId, currentUserDetails])
+  }, [usersDetails, dispatch, emailId, currentUserDetails, navigate])
   return (
     <div className="grid-container">
       <Header OpenSidebar={OpenSidebar} user={user} />
