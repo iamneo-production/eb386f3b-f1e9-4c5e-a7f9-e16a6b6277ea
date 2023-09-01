@@ -1,0 +1,113 @@
+{
+  "credentials": [
+    {
+      "email": "balaji@gmail.com",
+      "password": "Balaji@1234"
+    },
+    {
+      "email": "ashlesh@gmail.com",
+      "password": "Ashlesh@1234"
+    },
+    {
+      "email": "aravathammayya@gmail.com",
+      "password": "Arava@1234"
+    },
+    {
+      "email": "venaktesh@gmail.com",
+      "password": "Venkatesh@1234"
+    },
+    {
+      "email": "durgaprasad@gmail.com",
+      "password": "Durgaprasad@1234"
+    },
+    {
+      "email": "raj@gmail.com",
+      "password": "Raj@1234"
+    },
+    {
+      "email": "kumar@gmail.com",
+      "password": "Kumar@1234"
+    }
+  ],
+  "peopleDetails": [
+    {
+      "name": "Balaji",
+      "email": "balaji@gmail.com",
+      "gender": "male",
+      "role": "CUSTOMER",
+      "branch": "bangalore",
+      "dateOfBirth": "2023-05-05",
+      "panId": "ABCDE2211W"
+    },
+    {
+      "name": "ashlesh",
+      "email": "ashlesh@gmail.com",
+      "role": "BANK_MANAGER",
+      "branchMembers": [
+        {
+          "name": "arava",
+          "email": "aravathammayya@gmail.com"
+        }
+      ],
+      "branch": "bangalore"
+    },
+    {
+      "name": "arava",
+      "branch": "bangalore",
+      "role": "LOAN_OFFICER",
+      "email": "aravathammayya@gmail.com"
+    },
+    {
+      "name": "venkatesh",
+      "branch": "chennai",
+      "role": "BANK_MANAGER",
+      "email": "venaktesh@gmail.com",
+      "branchMembers": [
+        {
+          "name": "durga Prasad",
+          "email": "durgaprasad@gmail.com"
+        }
+      ]
+    },
+    {
+      "name": "durga Prasad",
+      "email": "durgaprasad@gmail.com",
+      "role": "LOAN_OFFICER"
+    },
+    {
+      "name": "raj",
+      "email": "raj@gmail.com",
+      "gender": "male",
+      "role": "CUSTOMER",
+      "dateOfBirth": "1992-05-05",
+      "branch": "chennai",
+      "panId": "ZBCDE2211W"
+    }
+  ],
+  "loanDetails": [
+    {
+      "loanAmount": 10000,
+      "loanTenure": 1,
+      "intrestRate": "fixed",
+      "uploadedFiles": [
+        {
+          "name": "61LX99EAaPL._UL1500_ (1).jpg",
+          "size": 129514
+        }
+      ],
+      "totalAmount": 11000,
+      "emiAmount": 916.67,
+      "name": "Balaji",
+      "dateOfBirth": "2023-05-05",
+      "gender": "male",
+      "panId": "ABCDE2211W",
+      "email": "balaji@gmail.com",
+      "branch": "bangalore",
+      "createdTime": "2023-09-01T05:08:56.881Z",
+      "status": "underwriting",
+      "loanOfficer": "arava",
+      "id": 1,
+      "comments": "arava"
+    }
+  ]
+}
