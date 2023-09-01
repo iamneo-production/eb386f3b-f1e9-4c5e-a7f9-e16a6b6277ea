@@ -16,7 +16,7 @@
 
 import "./App.css";
 import React, { useState, useEffect } from "react";
-import { Link, Routes, Route } from 'react-router-dom';
+import { Link, Routes, Route, useNavigate } from 'react-router-dom';
 import Header from "./components/common/Header";
 import ApplicationTracker from "./components/applicationTracker/ApplicationTracker";
 import SideBar from "./components/common/SideBar";
@@ -25,8 +25,10 @@ import { getUserDetails } from "./redux/UserReducer";
 import LoanForm from './components/LoanForm'
 import LoanList from './components/LoanList';
 import ViewLoan from './components/ViewLoan';
+import Loginpage from "./components/Login";
 function App() {
   const [openSidebarToggle, setOpenSidebarToggle] = useState(false);
+  const navigate = useNavigate();
   const dispatch = useDispatch();
   const usersDetails = useSelector((state) => state.user.user);
   const [currentUserDetails, setCurrentUserDetails] = useState({});
@@ -39,6 +41,7 @@ function App() {
   const OpenSidebar = () => {
     setOpenSidebarToggle(!openSidebarToggle);
   };
+
 
   useEffect(() => {
     setEmailId(localStorage.getItem('emailId', emailId));
@@ -72,6 +75,7 @@ function App() {
         <Route path='/applyLoan' element={<LoanForm userData={currentUserDetails} ></LoanForm>}></Route>
         <Route path='loans' element={<LoanList></LoanList>}></Route>
         <Route path='viewLoan/:id' element={<ViewLoan></ViewLoan>}></Route>
+        <Route path="/login" Component={Loginpage}></Route>
       </Routes>
       {/* <ApplicationTracker /> */}
     </div>
