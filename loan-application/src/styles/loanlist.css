@@ -1,0 +1,37 @@
+@import '../App.css';
+
+.table-container {
+
+    height: 100;
+    width: 100%;
+    margin: 1rem 3rem 1rem 1rem;
+}
+
+@media (min-width : 1024px) {
+
+    .table-container {
+        width: 75% !important;
+        margin-left: 5rem !important;
+    }
+}
+
+
+@media (min-width : 1440px) {
+
+    .table-container {
+        width: 55% !important;
+        margin-left: 18rem !important;
+    }
+}
+
+.assign-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.view-button {
+    text-decoration: underline;
+    color: blue;
+    cursor: pointer;
+}

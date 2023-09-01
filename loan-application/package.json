@@ -1,5 +1,5 @@
 {
-  "name": "team-three",
+  "name": "loan-application",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -27,12 +27,11 @@
     "yup": "^1.2.0"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "PORT=8081 react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "start:loanDetails": "json-server --watch ./src/assets/mock-data/loanData.json  --port=8080"
-
   },
   "eslintConfig": {
     "extends": [

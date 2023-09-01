@@ -1,0 +1,194 @@
+{
+    "credentials": [
+        {
+            "email": "balaji@gmail.com",
+            "password": "Balaji@1234"
+        },
+        {
+            "email": "ashlesh@gmail.com",
+            "password": "Ashlesh@1234"
+        },
+        {
+            "email": "aravathammayya@gmail.com",
+            "password": "Arava@1234"
+        },
+        {
+            "email": "venaktesh@gmail.com",
+            "password": "Venkatesh@1234"
+        },
+        {
+            "email": "durgaprasad@gmail.com",
+            "password": "Durgaprasad@1234"
+        },
+        {
+            "email": "raj@gmail.com",
+            "password": "Raj@1234"
+        },
+        {
+            "email": "kumar@gmail.com",
+            "password": "Kumar@1234"
+        }
+    ],
+    "peopleDetails": [
+        {
+            "name": "balaji",
+            "email": "balaji@gmail.com",
+            "role": "customer",
+            "loanBranch": "bangalore",
+            "status": "pending",
+            "id": 1
+        },
+        {
+            "name": "ashlesh",
+            "email": "ashlesh@gmail.com",
+            "role": "BANK_MANAGER",
+            "branchMembers": ["aravathammayya@gmail.com"],
+            "branch": "bangalore",
+            "loans": [
+                {
+                    "id": 1,
+                    "customerName": "balaji",
+                    "email": "balaji@gmail.com",
+                    "status": "pending"
+                },
+                {
+                    "id": 2,
+                    "customerName": "Kunal",
+                    "email": "kunal@gmail.com",
+                    "status": "approved"
+                }
+            ]
+        },
+        {
+            "name": "arava",
+            "branch": "bangalore",
+            "role": "LOAN OFFICER",
+            "email": "aravathammayya@gmail.com",
+            "loans": [
+                {
+                    "id": 1,
+                    "customerName": "balaji",
+                    "email": "balaji@gmail.com",
+                    "status": "pending"
+                }
+            ]
+        }
+    ],
+    "loanDetails": [
+        {
+            "id": 1,
+            "loanType": "CAR LOAN",
+            "customer": "balaji",
+            "status": "pending"
+        },
+        {
+            "id": 2,
+            "loanType": "HOUSE_LOAN",
+            "customer": "raj",
+            "status": "pending"
+        }
+    ],
+    "branchDetails": [
+        {
+            "branchName": "bangalore",
+            "loansPending": 1,
+            "loansApproved": 0
+        }
+    ],
+    "userType":[
+        {
+            "id": 1,
+            "role": "customer",
+            "title": "CUSTOMER"
+        },
+        {
+            "id": 2,
+            "role": "Loan Officer",
+            "title": "LOAN_OFFICER"
+        },
+        {
+            "id": 3,
+            "role": "BANK_MANAGER",
+            "title": "Branch Manager"
+        }
+    ],
+    "users":[
+        {
+            "name": "balaji",
+            "email": "balaji@gmail.com",
+            "role": "customer",
+            "loanBranch": "bangalore",
+            "status": "pending",
+            "id": 1,
+            "userTypeId": 1
+        },
+        {
+            "name": "ashlesh",
+            "email": "ashlesh@gmail.com",
+            "branchMembers": ["aravathammayya@gmail.com"],
+            "branch": "bangalore",
+            "userTypeId": 3,
+            "loans": [
+                {
+                    "id": 1,
+                    "customerName": "balaji",
+                    "email": "balaji@gmail.com",
+                    "status": "pending"
+                },
+                {
+                    "id": 2,
+                    "customerName": "Kunal",
+                    "email": "kunal@gmail.com",
+                    "status": "approved"
+                }
+            ]
+        },
+        {
+            "name": "arava",
+            "branch": "bangalore",
+            "role": "LOAN OFFICER",
+            "email": "aravathammayya@gmail.com",
+            "loans": [
+                {
+                    "id": 1,
+                    "customerName": "balaji",
+                    "email": "balaji@gmail.com",
+                    "status": "pending"
+                }
+            ]
+        }
+    ],
+    "loans":[
+        {
+            "id": 1,
+            "name": "Car Loan"
+        },
+        {
+            "id": 2,
+            "name": "Home Loan"
+        },
+        {
+            "id": 3,
+            "name": "Personal Loan"
+        }
+    ],
+    "loanApplications":[
+        {
+            "id":1,
+            "loan": {
+                "id": 1,
+                "name": "Car Loan"
+            },
+            "userDetail": {
+                "name": "balaji",
+                "email": "balaji@gmail.com",
+                "role": "customer",
+                "loanBranch": "bangalore",
+                "status": "pending",
+                "id": 1,
+                "userTypeId": 1
+            },
+            "userId": 1
+        }
+    ]
+}

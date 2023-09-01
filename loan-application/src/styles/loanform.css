@@ -1,0 +1,72 @@
+@import '../App.css';
+@import url('https://fonts.googleapis.com/css2?family=Karla&display=swap');
+
+ 
+
+.subform-title {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+@media (max-width: 767px) {
+    .row {
+        display: block !important;
+    }
+
+
+}
+
+@media (width :2560px) {
+    .row {
+        display: inline-flex !important;
+    }
+}
+
+.file-name {
+    margin: 0.3rem;
+    padding: 0.2rem;
+    display: flex !important;
+    text-decoration: none;
+    color: black;
+}
+
+.close-icon {
+    font-size: 20px;
+    padding-left: 0.5rem;
+}
+
+.close-icon:hover {
+    color: red;
+}
+
+.form-label-checkbox {
+    margin-left: 0.3rem;
+    margin-right: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.button-bar {
+    float: right;
+    display: flex;
+}
+
+.btn-position {
+    margin-left: 10px;
+    margin-top: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.calculator-container {
+    flex: 0 0 !important;
+}
+
+.error-message {
+    color: red;
+    font-family: karla;
+    font-size: 12px;
+    position: relative;
+    font-weight: 600;
+    margin-top: 0.1rem;
+    margin-left: 0.3rem;
+}
